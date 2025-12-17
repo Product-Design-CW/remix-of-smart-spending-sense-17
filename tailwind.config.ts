@@ -15,19 +15,22 @@ export default {
   	extend: {
 		fontFamily: {
 			serif: [
-				'Geist Mono',
-				'ui-monospace',
-				'monospace'
+				'Geist Sans',
+				'ui-sans-serif',
+				'system-ui',
+				'sans-serif'
 			],
 			sans: [
-				'Geist Mono',
-				'ui-monospace',
-				'monospace'
+				'Geist Sans',
+				'ui-sans-serif',
+				'system-ui',
+				'sans-serif'
 			],
 			mono: [
-				'Geist Mono',
-				'ui-monospace',
-				'monospace'
+				'Geist Sans',
+				'ui-sans-serif',
+				'system-ui',
+				'sans-serif'
 			]
 		},
   		colors: {
