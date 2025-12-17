@@ -103,7 +103,7 @@ export interface SuggestedAction {
   title: string;
   description: string;
   impact: string;
-  type: 'limit' | 'review' | 'alert' | 'cancel';
+  type: 'connect' | 'limit' | 'review' | 'alert' | 'cancel';
 }
 
 export interface PierreBill {

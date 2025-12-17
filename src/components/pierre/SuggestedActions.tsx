@@ -1,12 +1,12 @@
 import { SuggestedAction } from '@/types/pierre';
-import { Target, Search, Bell, X, ArrowRight } from 'lucide-react';
-import { Button } from '@/components/ui/button';
+import { Target, Search, Bell, X, ArrowRight, Link2 } from 'lucide-react';
 
 interface SuggestedActionsProps {
   actions: SuggestedAction[];
 }
 
 const actionIcons = {
+  connect: Link2,
   limit: Target,
   review: Search,
   alert: Bell,
