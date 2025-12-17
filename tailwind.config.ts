@@ -13,38 +13,23 @@ export default {
   		}
   	},
   	extend: {
-  		fontFamily: {
-  			serif: [
-  				'Lora',
-  				'ui-serif',
-  				'Georgia',
-  				'Cambria',
-  				'Times New Roman',
-  				'Times',
-  				'serif'
-  			],
-  			sans: [
-  				'Inter',
-  				'ui-sans-serif',
-  				'system-ui',
-  				'sans-serif',
-  				'Apple Color Emoji',
-  				'Segoe UI Emoji',
-  				'Segoe UI Symbol',
-  				'Noto Color Emoji'
-  			],
-  			mono: [
-  				'Geist Mono',
-  				'ui-monospace',
-  				'SFMono-Regular',
-  				'Menlo',
-  				'Monaco',
-  				'Consolas',
-  				'Liberation Mono',
-  				'Courier New',
-  				'monospace'
-  			]
-  		},
+		fontFamily: {
+			serif: [
+				'Geist Mono',
+				'ui-monospace',
+				'monospace'
+			],
+			sans: [
+				'Geist Mono',
+				'ui-monospace',
+				'monospace'
+			],
+			mono: [
+				'Geist Mono',
+				'ui-monospace',
+				'monospace'
+			]
+		},
   		colors: {
   			border: 'hsl(var(--border))',
   			input: 'hsl(var(--input))',
