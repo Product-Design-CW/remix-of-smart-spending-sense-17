@@ -10,7 +10,9 @@ const WastedMoneyCard = ({ wastedMoney }: WastedMoneyCardProps) => {
   const items = [
     { label: 'Juros', amount: wastedMoney.interest },
     { label: 'Taxas', amount: wastedMoney.fees },
-    ...(wastedMoney.lateFees > 0 ? [{ label: 'Multa por atraso', amount: wastedMoney.lateFees }] : []),
+    { label: 'Multa por atraso', amount: wastedMoney.lateFees },
+    { label: 'Multas de trânsito', amount: wastedMoney.trafficFines },
+    { label: 'Outras multas', amount: wastedMoney.otherFines },
   ].filter(item => item.amount > 0);
 
   return (

@@ -147,11 +147,13 @@ export const pierreBill: PierreBill = {
   },
 
   wastedMoney: {
-    total: 217.50,
+    total: 467.50,
     interest: 180.00,
     fees: 37.50,
     lateFees: 0,
-    insight: "Este é um dinheiro que você pagou sem receber nada em troca.",
+    trafficFines: 195.23,
+    otherFines: 54.77,
+    insight: "Este é um dinheiro que você pagou sem receber nada em troca. Multas e taxas podem ser evitadas com mais atenção.",
   },
 
   reflections: [
