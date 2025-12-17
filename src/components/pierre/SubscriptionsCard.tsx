@@ -3,16 +3,14 @@ import { formatCurrency } from '@/data/pierreBillData';
 import { Repeat, ChevronDown } from 'lucide-react';
 import { useState } from 'react';
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from '@/components/ui/collapsible';
-
 interface SubscriptionsCardProps {
   subscriptions: SubscriptionSummary;
 }
-
-const SubscriptionsCard = ({ subscriptions }: SubscriptionsCardProps) => {
+const SubscriptionsCard = ({
+  subscriptions
+}: SubscriptionsCardProps) => {
   const [isOpen, setIsOpen] = useState(false);
-
-  return (
-    <section className="opacity-0 animate-fade-up delay-5">
+  return <section className="opacity-0 animate-fade-up delay-5">
       <div className="bg-card rounded-2xl p-6 md:p-8 shadow-soft">
         <div className="flex items-start gap-3 mb-6">
           <div className="p-2 rounded-xl bg-primary/10">
@@ -25,7 +23,7 @@ const SubscriptionsCard = ({ subscriptions }: SubscriptionsCardProps) => {
         </div>
 
         {/* Annual impact highlight */}
-        <div className="bg-accent/50 rounded-xl p-5 mb-6">
+        <div className="rounded-xl p-5 mb-6 bg-border-muted border-border">
           <div className="flex items-end justify-between">
             <div>
               <p className="text-xs text-muted-foreground mb-1">Mensal</p>
@@ -51,24 +49,17 @@ const SubscriptionsCard = ({ subscriptions }: SubscriptionsCardProps) => {
 
           <CollapsibleContent>
             <div className="mt-4 pt-4 border-t border-border/50 space-y-3">
-              {subscriptions.items.map((item, i) => (
-                <div 
-                  key={i}
-                  className="flex items-center justify-between py-2"
-                >
+              {subscriptions.items.map((item, i) => <div key={i} className="flex items-center justify-between py-2">
                   <div>
                     <p className="text-sm font-medium">{item.name}</p>
                     <p className="text-xs text-muted-foreground">{item.category}</p>
                   </div>
                   <p className="font-medium text-sm">{formatCurrency(item.amount)}/mês</p>
-                </div>
-              ))}
+                </div>)}
             </div>
           </CollapsibleContent>
         </Collapsible>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default SubscriptionsCard;
