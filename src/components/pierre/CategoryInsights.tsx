@@ -22,9 +22,15 @@ const CategoryInsights = ({ categories }: CategoryInsightsProps) => {
     }
   };
 
-  const getTrendLabel = (trend: 'up' | 'down' | 'stable', percent: number) => {
-    if (trend === 'stable') return 'Estável';
-    return `${trend === 'up' ? '+' : '-'}${percent}%`;
+  const getDelta = (current: number, previous: number) => {
+    const delta = current - previous;
+    return delta;
+  };
+
+  const formatDelta = (delta: number) => {
+    if (delta === 0) return 'Mesmo valor';
+    const prefix = delta > 0 ? '+' : '';
+    return `${prefix}${formatCurrency(delta)}`;
   };
 
   return (
@@ -33,47 +39,68 @@ const CategoryInsights = ({ categories }: CategoryInsightsProps) => {
       <p className="text-sm text-muted-foreground mb-6">Com contexto, não apenas números</p>
 
       <div className="space-y-3">
-        {categories.map((category) => (
-          <Collapsible
-            key={category.id}
-            open={expandedId === category.id}
-            onOpenChange={(open) => setExpandedId(open ? category.id : null)}
-          >
-            <div className="bg-card rounded-xl overflow-hidden shadow-soft">
-              <CollapsibleTrigger className="w-full p-4 flex items-center justify-between hover:bg-muted/30 transition-colors">
-                <div className="flex items-center gap-3">
-                  <span className="text-2xl">{category.icon}</span>
-                  <div className="text-left">
-                    <p className="font-medium">{category.name}</p>
-                    <div className="flex items-center gap-2 mt-0.5">
-                      {getTrendIcon(category.trend)}
-                      <span className={`text-xs ${
-                        category.trend === 'up' ? 'text-negative' :
-                        category.trend === 'down' ? 'text-positive' :
-                        'text-muted-foreground'
-                      }`}>
-                        {getTrendLabel(category.trend, category.trendPercent)}
-                      </span>
+        {categories.map((category) => {
+          const delta = getDelta(category.amount, category.previousAmount);
+          
+          return (
+            <Collapsible
+              key={category.id}
+              open={expandedId === category.id}
+              onOpenChange={(open) => setExpandedId(open ? category.id : null)}
+            >
+              <div className="bg-card rounded-xl overflow-hidden shadow-soft">
+                <CollapsibleTrigger className="w-full p-4 flex items-center justify-between hover:bg-muted/30 transition-colors">
+                  <div className="flex items-center gap-3">
+                    <span className="text-2xl">{category.icon}</span>
+                    <div className="text-left">
+                      <p className="font-medium">{category.name}</p>
+                      <div className="flex items-center gap-2 mt-0.5">
+                        <span className="text-xs text-muted-foreground">
+                          {formatCurrency(category.previousAmount)}
+                        </span>
+                        <span className="text-xs text-muted-foreground">→</span>
+                        <span className="text-xs font-medium">
+                          {formatCurrency(category.amount)}
+                        </span>
+                      </div>
                     </div>
                   </div>
-                </div>
-                <div className="flex items-center gap-3">
-                  <span className="font-medium">{formatCurrency(category.amount)}</span>
-                  <ChevronDown className={`w-4 h-4 text-muted-foreground transition-transform duration-200
-                    ${expandedId === category.id ? 'rotate-180' : ''}`} />
-                </div>
-              </CollapsibleTrigger>
+                  <div className="flex items-center gap-3">
+                    <div className="text-right">
+                      <div className="flex items-center gap-1.5 justify-end">
+                        {getTrendIcon(category.trend)}
+                        <span className={`text-sm font-medium ${
+                          category.trend === 'up' ? 'text-negative' :
+                          category.trend === 'down' ? 'text-positive' :
+                          'text-muted-foreground'
+                        }`}>
+                          {formatDelta(delta)}
+                        </span>
+                      </div>
+                      <span className={`text-xs ${
+                        category.trend === 'up' ? 'text-negative/70' :
+                        category.trend === 'down' ? 'text-positive/70' :
+                        'text-muted-foreground'
+                      }`}>
+                        {category.trend === 'stable' ? 'Estável' : `${category.trend === 'up' ? '+' : '-'}${category.trendPercent}%`}
+                      </span>
+                    </div>
+                    <ChevronDown className={`w-4 h-4 text-muted-foreground transition-transform duration-200
+                      ${expandedId === category.id ? 'rotate-180' : ''}`} />
+                  </div>
+                </CollapsibleTrigger>
 
-              <CollapsibleContent>
-                <div className="px-4 pb-4 pt-2 border-t border-border/50">
-                  <p className="text-sm text-muted-foreground leading-relaxed">
-                    {category.insight}
-                  </p>
-                </div>
-              </CollapsibleContent>
-            </div>
-          </Collapsible>
-        ))}
+                <CollapsibleContent>
+                  <div className="px-4 pb-4 pt-2 border-t border-border/50">
+                    <p className="text-sm text-muted-foreground leading-relaxed">
+                      {category.insight}
+                    </p>
+                  </div>
+                </CollapsibleContent>
+              </div>
+            </Collapsible>
+          );
+        })}
       </div>
     </section>
   );

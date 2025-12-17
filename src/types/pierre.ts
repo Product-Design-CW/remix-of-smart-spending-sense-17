@@ -42,6 +42,7 @@ export interface CategorySpending {
   id: string;
   name: string;
   amount: number;
+  previousAmount: number;
   trend: 'up' | 'down' | 'stable';
   trendPercent: number;
   insight: string;
