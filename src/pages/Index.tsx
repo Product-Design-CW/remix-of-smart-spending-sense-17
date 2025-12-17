@@ -3,7 +3,6 @@ import OpeningInsight from '@/components/pierre/OpeningInsight';
 import BillBreakdownCard from '@/components/pierre/BillBreakdownCard';
 import FutureSimulationCard from '@/components/pierre/FutureSimulationCard';
 import CategoryInsights from '@/components/pierre/CategoryInsights';
-import InstallmentsCard from '@/components/pierre/InstallmentsCard';
 import SubscriptionsCard from '@/components/pierre/SubscriptionsCard';
 import WastedMoneyCard from '@/components/pierre/WastedMoneyCard';
 import SmartReflections from '@/components/pierre/SmartReflections';
@@ -36,28 +35,28 @@ const Index = () => {
           {/* 2. Bill Breakdown */}
           <BillBreakdownCard breakdown={pierreBill.breakdown} />
 
-          {/* 3. Future Simulation */}
-          <FutureSimulationCard simulation={pierreBill.futureSimulation} />
+          {/* 3. Future Simulation + Installments */}
+          <FutureSimulationCard 
+            simulation={pierreBill.futureSimulation} 
+            installments={pierreBill.installments} 
+          />
 
           {/* 4. Category Insights */}
           <CategoryInsights categories={pierreBill.categories} />
 
-          {/* 5. Installments */}
-          <InstallmentsCard installments={pierreBill.installments} />
-
-          {/* 6. Subscriptions */}
+          {/* 5. Subscriptions */}
           <SubscriptionsCard subscriptions={pierreBill.subscriptions} />
 
-          {/* 7. Wasted Money */}
+          {/* 6. Wasted Money */}
           <WastedMoneyCard wastedMoney={pierreBill.wastedMoney} />
 
-          {/* 8. Smart Reflections */}
+          {/* 7. Smart Reflections */}
           <SmartReflections reflections={pierreBill.reflections} />
 
           {/* Divider */}
           <div className="h-px bg-border/50" />
 
-          {/* 9. Suggested Actions */}
+          {/* 8. Suggested Actions */}
           <SuggestedActions actions={pierreBill.suggestedActions} />
         </div>
 
