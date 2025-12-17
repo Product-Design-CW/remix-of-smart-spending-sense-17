@@ -10,7 +10,7 @@ const SmartReflections = ({ reflections }: SmartReflectionsProps) => {
     <section className="opacity-0 animate-fade-up delay-6">
       <div className="flex items-center gap-2 mb-6">
         <Sparkles className="w-5 h-5 text-primary" />
-        <h2 className="font-serif text-xl">What Pierre noticed</h2>
+        <h2 className="font-serif text-xl">O que o Pierre notou</h2>
       </div>
 
       <div className="space-y-4">

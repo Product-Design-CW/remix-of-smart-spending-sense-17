@@ -9,8 +9,8 @@ interface BillBreakdownCardProps {
 const BillBreakdownCard = ({ breakdown }: BillBreakdownCardProps) => {
   const segments = [
     {
-      label: 'Past decisions',
-      sublabel: 'Installments + recurring',
+      label: 'Decisões passadas',
+      sublabel: 'Parcelas + recorrentes',
       amount: breakdown.pastDecisions.amount,
       percentage: breakdown.pastDecisions.percentage,
       icon: History,
@@ -18,8 +18,8 @@ const BillBreakdownCard = ({ breakdown }: BillBreakdownCardProps) => {
       barColor: 'bg-primary',
     },
     {
-      label: "This month's choices",
-      sublabel: 'Variable spending',
+      label: 'Escolhas deste mês',
+      sublabel: 'Gastos variáveis',
       amount: breakdown.thisMonthChoices.amount,
       percentage: breakdown.thisMonthChoices.percentage,
       icon: ShoppingBag,
@@ -27,8 +27,8 @@ const BillBreakdownCard = ({ breakdown }: BillBreakdownCardProps) => {
       barColor: 'bg-insight-warning',
     },
     {
-      label: 'Cost of credit',
-      sublabel: 'Interest & fees',
+      label: 'Custo do crédito',
+      sublabel: 'Juros e taxas',
       amount: breakdown.costOfCredit.amount,
       percentage: breakdown.costOfCredit.percentage,
       icon: Percent,
@@ -40,7 +40,7 @@ const BillBreakdownCard = ({ breakdown }: BillBreakdownCardProps) => {
   return (
     <section className="opacity-0 animate-fade-up delay-1">
       <div className="bg-card rounded-2xl p-6 md:p-8 shadow-soft">
-        <h2 className="font-serif text-xl mb-2">What really shaped this bill</h2>
+        <h2 className="font-serif text-xl mb-2">O que realmente moldou esta fatura</h2>
         <p className="text-muted-foreground text-sm mb-8">{breakdown.explanation}</p>
 
         {/* Visual bar */}

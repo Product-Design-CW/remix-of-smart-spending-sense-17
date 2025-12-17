@@ -19,19 +19,19 @@ const InstallmentsCard = ({ installments }: InstallmentsCardProps) => {
             <Clock className="w-5 h-5 text-insight-warning" />
           </div>
           <div>
-            <h2 className="font-serif text-xl">Your future self is paying</h2>
-            <p className="text-sm text-muted-foreground mt-1">Installments are future debt, not spending</p>
+            <h2 className="font-serif text-xl">Seu eu do futuro está pagando</h2>
+            <p className="text-sm text-muted-foreground mt-1">Parcelas são dívidas futuras, não gastos</p>
           </div>
         </div>
 
         {/* Key stats */}
         <div className="grid grid-cols-2 gap-4 mb-4">
           <div className="bg-background/60 rounded-xl p-4">
-            <p className="text-xs text-muted-foreground mb-1">This bill</p>
+            <p className="text-xs text-muted-foreground mb-1">Nesta fatura</p>
             <p className="font-serif text-2xl font-medium">{formatCurrency(installments.totalThisBill)}</p>
           </div>
           <div className="bg-background/60 rounded-xl p-4">
-            <p className="text-xs text-muted-foreground mb-1">Monthly impact</p>
+            <p className="text-xs text-muted-foreground mb-1">Impacto mensal</p>
             <p className="font-serif text-2xl font-medium">{formatCurrency(installments.monthlyImpact)}</p>
           </div>
         </div>
@@ -56,7 +56,7 @@ const InstallmentsCard = ({ installments }: InstallmentsCardProps) => {
         {/* Expandable details */}
         <Collapsible open={isOpen} onOpenChange={setIsOpen}>
           <CollapsibleTrigger className="flex items-center gap-2 text-sm text-primary hover:text-primary/80 transition-colors">
-            <span>See all installments</span>
+            <span>Ver todas as parcelas</span>
             <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${isOpen ? 'rotate-180' : ''}`} />
           </CollapsibleTrigger>
 
@@ -70,7 +70,7 @@ const InstallmentsCard = ({ installments }: InstallmentsCardProps) => {
                   <div>
                     <p className="text-sm font-medium">{item.merchant}</p>
                     <p className="text-xs text-muted-foreground">
-                      {item.currentInstallment}/{item.totalInstallments} • Originally {formatCurrency(item.originalAmount)}
+                      {item.currentInstallment}/{item.totalInstallments} • Original {formatCurrency(item.originalAmount)}
                     </p>
                     <p className="text-xs text-primary/80 mt-0.5">
                       Termina em {formatMonthYear(item.endDate)}
@@ -82,7 +82,7 @@ const InstallmentsCard = ({ installments }: InstallmentsCardProps) => {
 
               <div className="pt-3 border-t border-border/50">
                 <div className="flex items-center justify-between text-sm">
-                  <span className="text-muted-foreground">Total remaining</span>
+                  <span className="text-muted-foreground">Total restante</span>
                   <span className="font-medium">{formatCurrency(installments.totalRemaining)}</span>
                 </div>
               </div>

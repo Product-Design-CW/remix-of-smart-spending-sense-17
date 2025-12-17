@@ -8,9 +8,9 @@ interface WastedMoneyCardProps {
 
 const WastedMoneyCard = ({ wastedMoney }: WastedMoneyCardProps) => {
   const items = [
-    { label: 'Interest', amount: wastedMoney.interest },
-    { label: 'Fees', amount: wastedMoney.fees },
-    ...(wastedMoney.lateFees > 0 ? [{ label: 'Late fees', amount: wastedMoney.lateFees }] : []),
+    { label: 'Juros', amount: wastedMoney.interest },
+    { label: 'Taxas', amount: wastedMoney.fees },
+    ...(wastedMoney.lateFees > 0 ? [{ label: 'Multa por atraso', amount: wastedMoney.lateFees }] : []),
   ].filter(item => item.amount > 0);
 
   return (
@@ -21,7 +21,7 @@ const WastedMoneyCard = ({ wastedMoney }: WastedMoneyCardProps) => {
             <Flame className="w-5 h-5 text-insight-negative" />
           </div>
           <div>
-            <h2 className="font-serif text-xl">Money that didn't improve your life</h2>
+            <h2 className="font-serif text-xl">Dinheiro que não melhorou sua vida</h2>
           </div>
         </div>
 

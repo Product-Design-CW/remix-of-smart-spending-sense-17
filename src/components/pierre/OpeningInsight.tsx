@@ -31,13 +31,13 @@ const OpeningInsight = ({ overview }: OpeningInsightProps) => {
             ) : (
               <ArrowDown className="w-4 h-4" />
             )}
-            <span>{changeAbs.toFixed(0)}% vs last month</span>
+            <span>{changeAbs.toFixed(0)}% vs mês passado</span>
           </div>
         </div>
 
         <div className="flex items-center gap-2 text-muted-foreground">
           <Calendar className="w-4 h-4" />
-          <span className="text-sm">Due {formatDate(overview.dueDate)}</span>
+          <span className="text-sm">Vencimento em {formatDate(overview.dueDate)}</span>
         </div>
       </div>
     </section>

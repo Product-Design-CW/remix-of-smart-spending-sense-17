@@ -7,7 +7,7 @@ export const pierreBill: PierreBill = {
     changePercent: 20.6,
     dueDate: '2025-01-15',
     insight: {
-      summary: "This bill is higher mainly because of past installment decisions — your daily spending was actually under control.",
+      summary: "Esta fatura está mais alta principalmente por decisões de parcelamento — seus gastos do dia a dia estavam sob controle.",
       tone: 'empowering',
     },
   },
@@ -29,60 +29,60 @@ export const pierreBill: PierreBill = {
       interest: 180.00,
       fees: 37.50,
     },
-    explanation: "More than half of this bill was already decided before the month even started.",
+    explanation: "Mais da metade desta fatura já estava decidida antes mesmo do mês começar.",
   },
 
   futureSimulation: {
     minimumNextMonth: 2050.00,
     lockedAmount: 2050.00,
     installmentMonths: 8,
-    insight: "If you made zero purchases next month, your bill would still be R$ 2,050.",
+    insight: "Se você não fizesse nenhuma compra no próximo mês, sua fatura ainda seria de R$ 2.050.",
   },
 
   categories: [
     {
       id: '1',
-      name: 'Food & Delivery',
+      name: 'Alimentação e Delivery',
       amount: 892.45,
       trend: 'up',
       trendPercent: 28,
-      insight: "Food delivery spikes on weekends are driving this category up.",
+      insight: "Picos de delivery nos fins de semana estão elevando essa categoria.",
       icon: '🍽️',
     },
     {
       id: '2',
-      name: 'Shopping',
+      name: 'Compras',
       amount: 1245.00,
       trend: 'stable',
       trendPercent: 3,
-      insight: "Shopping is quiet, but installments keep it heavy.",
+      insight: "Compras estão calmas, mas as parcelas mantêm o valor alto.",
       icon: '🛍️',
     },
     {
       id: '3',
-      name: 'Transport',
+      name: 'Transporte',
       amount: 342.80,
       trend: 'down',
       trendPercent: 15,
-      insight: "Transport is stable and predictable. Good control here.",
+      insight: "Transporte está estável e previsível. Bom controle aqui.",
       icon: '🚗',
     },
     {
       id: '4',
-      name: 'Entertainment',
+      name: 'Entretenimento',
       amount: 456.00,
       trend: 'up',
       trendPercent: 45,
-      insight: "Concert tickets made this an unusual month.",
+      insight: "Ingressos de shows fizeram deste um mês atípico.",
       icon: '🎬',
     },
     {
       id: '5',
-      name: 'Health',
+      name: 'Saúde',
       amount: 189.00,
       trend: 'stable',
       trendPercent: 0,
-      insight: "Consistent gym membership. Nothing unexpected.",
+      insight: "Mensalidade da academia consistente. Nada inesperado.",
       icon: '💪',
     },
   ],
@@ -103,7 +103,7 @@ export const pierreBill: PierreBill = {
         endDate: '2025-09',
       },
       {
-        merchant: 'Furniture Store',
+        merchant: 'Loja de Móveis',
         originalAmount: 3200.00,
         monthlyAmount: 320.00,
         currentInstallment: 6,
@@ -111,7 +111,7 @@ export const pierreBill: PierreBill = {
         endDate: '2025-05',
       },
       {
-        merchant: 'Electronics',
+        merchant: 'Eletrônicos',
         originalAmount: 1800.00,
         monthlyAmount: 300.00,
         currentInstallment: 2,
@@ -119,7 +119,7 @@ export const pierreBill: PierreBill = {
         endDate: '2025-05',
       },
       {
-        merchant: 'Department Store',
+        merchant: 'Loja de Departamento',
         originalAmount: 2240.00,
         monthlyAmount: 560.08,
         currentInstallment: 3,
@@ -127,7 +127,7 @@ export const pierreBill: PierreBill = {
         endDate: '2025-02',
       },
     ],
-    insight: "Your future bills are carrying R$ 1,120 per month because of past purchases.",
+    insight: "Suas faturas futuras carregam R$ 1.120 por mês por causa de compras passadas.",
   },
 
   subscriptions: {
@@ -135,15 +135,15 @@ export const pierreBill: PierreBill = {
     annualTotal: 3455.28,
     count: 7,
     items: [
-      { name: 'Netflix', amount: 55.90, frequency: 'monthly', category: 'Entertainment' },
-      { name: 'Spotify Family', amount: 34.90, frequency: 'monthly', category: 'Entertainment' },
-      { name: 'iCloud Storage', amount: 12.90, frequency: 'monthly', category: 'Technology' },
-      { name: 'Gym Membership', amount: 149.90, frequency: 'monthly', category: 'Health' },
-      { name: 'HBO Max', amount: 34.90, frequency: 'monthly', category: 'Entertainment' },
-      { name: 'News Subscription', amount: 29.90, frequency: 'monthly', category: 'Information' },
-      { name: 'Cloud Backup', amount: 19.90, frequency: 'monthly', category: 'Technology' },
+      { name: 'Netflix', amount: 55.90, frequency: 'monthly', category: 'Entretenimento' },
+      { name: 'Spotify Família', amount: 34.90, frequency: 'monthly', category: 'Entretenimento' },
+      { name: 'iCloud', amount: 12.90, frequency: 'monthly', category: 'Tecnologia' },
+      { name: 'Academia', amount: 149.90, frequency: 'monthly', category: 'Saúde' },
+      { name: 'HBO Max', amount: 34.90, frequency: 'monthly', category: 'Entretenimento' },
+      { name: 'Assinatura de Jornal', amount: 29.90, frequency: 'monthly', category: 'Informação' },
+      { name: 'Backup na Nuvem', amount: 19.90, frequency: 'monthly', category: 'Tecnologia' },
     ],
-    insight: "These subscriptions cost you R$ 3,455 per year. Two of them haven't been used in 30+ days.",
+    insight: "Essas assinaturas custam R$ 3.455 por ano. Duas delas não são usadas há mais de 30 dias.",
   },
 
   wastedMoney: {
@@ -151,23 +151,23 @@ export const pierreBill: PierreBill = {
     interest: 180.00,
     fees: 37.50,
     lateFees: 0,
-    insight: "This is money you paid without getting anything back.",
+    insight: "Este é um dinheiro que você pagou sem receber nada em troca.",
   },
 
   reflections: [
     {
       id: '1',
-      text: "Your spending isn't out of control — your commitments are.",
+      text: "Seus gastos não estão fora de controle — seus compromissos estão.",
       type: 'observation',
     },
     {
       id: '2',
-      text: "Reducing new installments would quickly lower future bills.",
+      text: "Reduzir novos parcelamentos diminuiria rapidamente as faturas futuras.",
       type: 'suggestion',
     },
     {
       id: '3',
-      text: "Subscriptions are small individually, but heavy together.",
+      text: "Assinaturas são pequenas individualmente, mas pesadas juntas.",
       type: 'observation',
     },
   ],
@@ -175,16 +175,16 @@ export const pierreBill: PierreBill = {
   suggestedActions: [
     {
       id: '1',
-      title: 'Set a food delivery limit',
-      description: 'Cap weekend delivery spending at R$ 150',
-      impact: 'Could save R$ 200/month',
+      title: 'Definir um limite para delivery',
+      description: 'Limitar gastos com delivery nos fins de semana a R$ 150',
+      impact: 'Pode economizar R$ 200/mês',
       type: 'limit',
     },
     {
       id: '2',
-      title: 'Review unused subscriptions',
-      description: 'HBO Max and Cloud Backup show low usage',
-      impact: 'R$ 55/month, R$ 660/year',
+      title: 'Revisar assinaturas não usadas',
+      description: 'HBO Max e Backup na Nuvem mostram baixo uso',
+      impact: 'R$ 55/mês, R$ 660/ano',
       type: 'review',
     },
   ],
@@ -198,7 +198,7 @@ export const formatCurrency = (amount: number): string => {
 };
 
 export const formatDate = (dateStr: string): string => {
-  return new Date(dateStr).toLocaleDateString('en-US', {
+  return new Date(dateStr).toLocaleDateString('pt-BR', {
     month: 'long',
     day: 'numeric',
   });
