@@ -34,7 +34,10 @@ export default {
 			]
 		},
   		colors: {
-  			border: 'hsl(var(--border))',
+			border: {
+				DEFAULT: 'hsl(var(--border))',
+				muted: 'hsl(var(--border-muted))'
+			},
   			input: 'hsl(var(--input))',
   			ring: 'hsl(var(--ring))',
   			background: 'hsl(var(--background))',
@@ -73,12 +76,14 @@ export default {
   				neutral: 'hsl(var(--insight-neutral))',
   				warning: 'hsl(var(--insight-warning))'
   			},
-  			surface: {
-  				warm: 'hsl(var(--surface-warm))',
-  				cool: 'hsl(var(--surface-cool))',
-  				highlight: 'hsl(var(--surface-highlight))',
-  				concern: 'hsl(var(--surface-concern))'
-  			},
+			surface: {
+				DEFAULT: 'hsl(var(--surface))',
+				hover: 'hsl(var(--surface-hover))',
+				warm: 'hsl(var(--surface-warm))',
+				cool: 'hsl(var(--surface-cool))',
+				highlight: 'hsl(var(--surface-highlight))',
+				concern: 'hsl(var(--surface-concern))'
+			},
   			sidebar: {
   				DEFAULT: 'hsl(var(--sidebar-background))',
   				foreground: 'hsl(var(--sidebar-foreground))',
