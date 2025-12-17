@@ -9,7 +9,7 @@ interface FutureSimulationCardProps {
 const FutureSimulationCard = ({ simulation }: FutureSimulationCardProps) => {
   return (
     <section className="opacity-0 animate-fade-up delay-2">
-      <div className="surface-cool rounded-2xl p-6 md:p-8 border border-border/50">
+      <div className="bg-card rounded-2xl p-6 md:p-8 border border-border/50">
         <div className="flex items-start gap-3 mb-6">
           <div className="p-2 rounded-xl bg-primary/10">
             <FastForward className="w-5 h-5 text-primary" />
