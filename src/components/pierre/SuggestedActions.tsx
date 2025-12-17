@@ -17,8 +17,8 @@ const SuggestedActions = ({ actions }: SuggestedActionsProps) => {
   return (
     <section className="opacity-0 animate-fade-up delay-7">
       <div className="text-center mb-8">
-        <h2 className="font-serif text-2xl mb-2">One small change</h2>
-        <p className="text-muted-foreground">can make next month feel lighter</p>
+        <h2 className="font-serif text-2xl mb-2">Uma pequena mudança</h2>
+        <p className="text-muted-foreground">pode tornar o próximo mês mais leve</p>
       </div>
 
       <div className="space-y-4">

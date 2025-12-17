@@ -19,7 +19,7 @@ const Index = () => {
             <div className="flex items-center gap-2">
               <span className="font-serif text-xl font-medium">Pierre</span>
             </div>
-            <span className="text-sm text-muted-foreground">December 2024</span>
+            <span className="text-sm text-muted-foreground">Dezembro 2024</span>
           </div>
         </div>
       </header>
@@ -64,10 +64,10 @@ const Index = () => {
         {/* Footer */}
         <footer className="mt-16 pt-8 border-t border-border/50 text-center pb-8">
           <p className="text-xs text-muted-foreground">
-            Statement period: Dec 1 – Dec 31, 2024
+            Período da fatura: 1 – 31 de dezembro de 2024
           </p>
           <p className="text-xs text-muted-foreground mt-1">
-            Need help understanding something? <button className="text-primary hover:underline">Talk to Pierre</button>
+            Precisa de ajuda para entender algo? <button className="text-primary hover:underline">Fale com o Pierre</button>
           </p>
         </footer>
       </main>

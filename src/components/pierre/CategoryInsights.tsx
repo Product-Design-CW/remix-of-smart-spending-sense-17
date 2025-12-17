@@ -23,14 +23,14 @@ const CategoryInsights = ({ categories }: CategoryInsightsProps) => {
   };
 
   const getTrendLabel = (trend: 'up' | 'down' | 'stable', percent: number) => {
-    if (trend === 'stable') return 'Stable';
+    if (trend === 'stable') return 'Estável';
     return `${trend === 'up' ? '+' : '-'}${percent}%`;
   };
 
   return (
     <section className="opacity-0 animate-fade-up delay-3">
-      <h2 className="font-serif text-xl mb-2">Where your money went</h2>
-      <p className="text-sm text-muted-foreground mb-6">With context, not just numbers</p>
+      <h2 className="font-serif text-xl mb-2">Para onde foi seu dinheiro</h2>
+      <p className="text-sm text-muted-foreground mb-6">Com contexto, não apenas números</p>
 
       <div className="space-y-3">
         {categories.map((category) => (

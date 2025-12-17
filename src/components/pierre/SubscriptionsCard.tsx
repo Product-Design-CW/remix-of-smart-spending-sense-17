@@ -19,8 +19,8 @@ const SubscriptionsCard = ({ subscriptions }: SubscriptionsCardProps) => {
             <Repeat className="w-5 h-5 text-primary" />
           </div>
           <div>
-            <h2 className="font-serif text-xl">Subscriptions you don't think about</h2>
-            <p className="text-sm text-muted-foreground mt-1">{subscriptions.count} recurring charges</p>
+            <h2 className="font-serif text-xl">Assinaturas que você não pensa</h2>
+            <p className="text-sm text-muted-foreground mt-1">{subscriptions.count} cobranças recorrentes</p>
           </div>
         </div>
 
@@ -28,11 +28,11 @@ const SubscriptionsCard = ({ subscriptions }: SubscriptionsCardProps) => {
         <div className="bg-accent/50 rounded-xl p-5 mb-6">
           <div className="flex items-end justify-between">
             <div>
-              <p className="text-xs text-muted-foreground mb-1">Monthly</p>
+              <p className="text-xs text-muted-foreground mb-1">Mensal</p>
               <p className="font-serif text-xl font-medium">{formatCurrency(subscriptions.monthlyTotal)}</p>
             </div>
             <div className="text-right">
-              <p className="text-xs text-muted-foreground mb-1">Per year</p>
+              <p className="text-xs text-muted-foreground mb-1">Por ano</p>
               <p className="font-serif text-2xl font-medium text-foreground">{formatCurrency(subscriptions.annualTotal)}</p>
             </div>
           </div>
@@ -45,7 +45,7 @@ const SubscriptionsCard = ({ subscriptions }: SubscriptionsCardProps) => {
         {/* Expandable list */}
         <Collapsible open={isOpen} onOpenChange={setIsOpen}>
           <CollapsibleTrigger className="flex items-center gap-2 text-sm text-primary hover:text-primary/80 transition-colors">
-            <span>See all subscriptions</span>
+            <span>Ver todas as assinaturas</span>
             <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${isOpen ? 'rotate-180' : ''}`} />
           </CollapsibleTrigger>
 
@@ -60,7 +60,7 @@ const SubscriptionsCard = ({ subscriptions }: SubscriptionsCardProps) => {
                     <p className="text-sm font-medium">{item.name}</p>
                     <p className="text-xs text-muted-foreground">{item.category}</p>
                   </div>
-                  <p className="font-medium text-sm">{formatCurrency(item.amount)}/mo</p>
+                  <p className="font-medium text-sm">{formatCurrency(item.amount)}/mês</p>
                 </div>
               ))}
             </div>
