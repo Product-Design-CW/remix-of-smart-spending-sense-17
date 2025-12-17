@@ -3,16 +3,14 @@ import { formatCurrency, formatMonthYear } from '@/data/pierreBillData';
 import { Clock, ChevronDown, CalendarCheck } from 'lucide-react';
 import { useState } from 'react';
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from '@/components/ui/collapsible';
-
 interface InstallmentsCardProps {
   installments: InstallmentSummary;
 }
-
-const InstallmentsCard = ({ installments }: InstallmentsCardProps) => {
+const InstallmentsCard = ({
+  installments
+}: InstallmentsCardProps) => {
   const [isOpen, setIsOpen] = useState(false);
-
-  return (
-    <section className="opacity-0 animate-fade-up delay-4">
+  return <section className="opacity-0 animate-fade-up delay-4">
       <div className="bg-card rounded-2xl p-6 md:p-8">
         <div className="flex items-start gap-3 mb-6">
           <div className="p-2 rounded-xl bg-insight-warning/20">
@@ -25,16 +23,7 @@ const InstallmentsCard = ({ installments }: InstallmentsCardProps) => {
         </div>
 
         {/* Key stats */}
-        <div className="grid grid-cols-2 gap-4 mb-4">
-          <div className="bg-background/60 rounded-xl p-4">
-            <p className="text-xs text-muted-foreground mb-1">Nesta fatura</p>
-            <p className="font-serif text-2xl font-medium">{formatCurrency(installments.totalThisBill)}</p>
-          </div>
-          <div className="bg-background/60 rounded-xl p-4">
-            <p className="text-xs text-muted-foreground mb-1">Impacto mensal</p>
-            <p className="font-serif text-2xl font-medium">{formatCurrency(installments.monthlyImpact)}</p>
-          </div>
-        </div>
+        
 
         {/* Debt free date highlight */}
         <div className="bg-primary/10 rounded-xl p-4 mb-6 flex items-center gap-3">
@@ -49,24 +38,15 @@ const InstallmentsCard = ({ installments }: InstallmentsCardProps) => {
           </div>
         </div>
 
-        <p className="text-foreground/80 leading-relaxed mb-6">
-          {installments.insight}
-        </p>
+        
 
         {/* Expandable details */}
         <Collapsible open={isOpen} onOpenChange={setIsOpen}>
-          <CollapsibleTrigger className="flex items-center gap-2 text-sm text-primary hover:text-primary/80 transition-colors">
-            <span>Ver todas as parcelas</span>
-            <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${isOpen ? 'rotate-180' : ''}`} />
-          </CollapsibleTrigger>
+          
 
           <CollapsibleContent>
-            <div className="mt-4 pt-4 border-t border-border/50 space-y-3">
-              {installments.items.map((item, i) => (
-                <div 
-                  key={i}
-                  className="flex items-center justify-between py-2"
-                >
+            <div className="mt-4 border-t border-border/50 space-y-3 border-0 pt-0">
+              {installments.items.map((item, i) => <div key={i} className="flex items-center justify-between py-2">
                   <div>
                     <p className="text-sm font-medium">{item.merchant}</p>
                     <p className="text-xs text-muted-foreground">
@@ -77,8 +57,7 @@ const InstallmentsCard = ({ installments }: InstallmentsCardProps) => {
                     </p>
                   </div>
                   <p className="font-medium text-sm">{formatCurrency(item.monthlyAmount)}</p>
-                </div>
-              ))}
+                </div>)}
 
               <div className="pt-3 border-t border-border/50">
                 <div className="flex items-center justify-between text-sm">
@@ -90,8 +69,6 @@ const InstallmentsCard = ({ installments }: InstallmentsCardProps) => {
           </CollapsibleContent>
         </Collapsible>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default InstallmentsCard;
