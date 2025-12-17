@@ -13,7 +13,7 @@ const InstallmentsCard = ({ installments }: InstallmentsCardProps) => {
 
   return (
     <section className="opacity-0 animate-fade-up delay-4">
-      <div className="surface-warm rounded-2xl p-6 md:p-8">
+      <div className="bg-card rounded-2xl p-6 md:p-8">
         <div className="flex items-start gap-3 mb-6">
           <div className="p-2 rounded-xl bg-insight-warning/20">
             <Clock className="w-5 h-5 text-insight-warning" />
