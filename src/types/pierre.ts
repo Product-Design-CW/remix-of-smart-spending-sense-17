@@ -87,6 +87,8 @@ export interface WastedMoney {
   interest: number;
   fees: number;
   lateFees: number;
+  trafficFines: number;
+  otherFines: number;
   insight: string;
 }
 
