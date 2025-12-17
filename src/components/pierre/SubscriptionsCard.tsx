@@ -23,7 +23,7 @@ const SubscriptionsCard = ({
         </div>
 
         {/* Annual impact highlight */}
-        <div className="rounded-xl p-5 mb-6 bg-border-muted border-border">
+        <div className="rounded-xl p-5 mb-6 bg-border-muted border-border border">
           <div className="flex items-end justify-between">
             <div>
               <p className="text-xs text-muted-foreground mb-1">Mensal</p>
