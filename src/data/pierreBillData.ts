@@ -176,6 +176,13 @@ export const pierreBill: PierreBill = {
 
   suggestedActions: [
     {
+      id: '0',
+      title: 'Centralize suas contas no Pierre',
+      description: 'Conecte outros cartões e contas bancárias para ter uma visão completa dos seus gastos',
+      impact: 'Visão 360° das suas finanças',
+      type: 'connect',
+    },
+    {
       id: '1',
       title: 'Definir um limite para delivery',
       description: 'Limitar gastos com delivery nos fins de semana a R$ 150',
