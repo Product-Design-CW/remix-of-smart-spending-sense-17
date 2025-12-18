@@ -14,24 +14,31 @@ export default {
   	},
   	extend: {
 		fontFamily: {
-			serif: [
-				'Geist Sans',
-				'ui-sans-serif',
-				'system-ui',
-				'sans-serif'
-			],
-			sans: [
-				'Geist Sans',
-				'ui-sans-serif',
-				'system-ui',
-				'sans-serif'
-			],
-			mono: [
-				'Geist Sans',
-				'ui-sans-serif',
-				'system-ui',
-				'sans-serif'
-			]
+			serif: ['Geist', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+			sans: ['Geist', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+			mono: ['Geist', 'ui-sans-serif', 'system-ui', 'sans-serif']
+		},
+		fontSize: {
+			// Headings
+			'h1': ['30px', { lineHeight: '100%', fontWeight: '400' }],
+			'h1-medium': ['30px', { lineHeight: '100%', fontWeight: '500' }],
+			'h1-bold': ['30px', { lineHeight: '100%', fontWeight: '700' }],
+			'h2': ['24px', { lineHeight: '32px', fontWeight: '400' }],
+			'h2-medium': ['24px', { lineHeight: '32px', fontWeight: '500' }],
+			'h2-bold': ['24px', { lineHeight: '32px', fontWeight: '700' }],
+			'h3': ['20px', { lineHeight: '28px', fontWeight: '400' }],
+			'h3-medium': ['20px', { lineHeight: '28px', fontWeight: '500' }],
+			'h3-bold': ['20px', { lineHeight: '28px', fontWeight: '700' }],
+			// Body
+			'body-lg': ['18px', { lineHeight: '24px', fontWeight: '400' }],
+			'body-lg-medium': ['18px', { lineHeight: '24px', fontWeight: '500' }],
+			'body-lg-bold': ['18px', { lineHeight: '24px', fontWeight: '700' }],
+			'body': ['16px', { lineHeight: '24px', fontWeight: '400' }],
+			'body-medium': ['16px', { lineHeight: '24px', fontWeight: '500' }],
+			'body-bold': ['16px', { lineHeight: '24px', fontWeight: '700' }],
+			'body-sm': ['14px', { lineHeight: 'auto', fontWeight: '400' }],
+			'body-sm-medium': ['14px', { lineHeight: 'auto', fontWeight: '500' }],
+			'body-sm-bold': ['14px', { lineHeight: 'auto', fontWeight: '700' }],
 		},
   		colors: {
 			border: {
