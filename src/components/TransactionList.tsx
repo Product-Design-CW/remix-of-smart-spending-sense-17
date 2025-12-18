@@ -6,13 +6,13 @@ interface TransactionListProps {
 }
 
 const categoryBgClasses: Record<CategoryType, string> = {
-  food: 'bg-category-food/20 text-category-food',
-  transport: 'bg-category-transport/20 text-category-transport',
-  shopping: 'bg-category-shopping/20 text-category-shopping',
-  entertainment: 'bg-category-entertainment/20 text-category-entertainment',
-  utilities: 'bg-category-utilities/20 text-category-utilities',
-  health: 'bg-category-health/20 text-category-health',
-  other: 'bg-category-other/20 text-category-other',
+  food: 'bg-cat-food/20 text-cat-food',
+  transport: 'bg-cat-transport/20 text-cat-transport',
+  shopping: 'bg-cat-shopping/20 text-cat-shopping',
+  entertainment: 'bg-cat-leisure/20 text-cat-leisure',
+  utilities: 'bg-cat-housing/20 text-cat-housing',
+  health: 'bg-cat-health/20 text-cat-health',
+  other: 'bg-cat-other/20 text-cat-other',
 };
 
 const TransactionList = ({ transactions }: TransactionListProps) => {
@@ -31,7 +31,7 @@ const TransactionList = ({ transactions }: TransactionListProps) => {
   const categories: (CategoryType | 'all')[] = ['all', 'food', 'transport', 'shopping', 'entertainment', 'utilities', 'health', 'other'];
 
   return (
-    <div className="rounded-2xl gradient-card shadow-card p-6 animate-fade-in stagger-2">
+    <div className="rounded-[24px] gradient-card shadow-card p-6 animate-fade-in stagger-2">
       <div className="flex items-center justify-between mb-6">
         <h2 className="text-lg font-semibold">Transactions</h2>
         <span className="text-sm text-muted-foreground">{filteredTransactions.length} items</span>
@@ -58,12 +58,12 @@ const TransactionList = ({ transactions }: TransactionListProps) => {
         {filteredTransactions.map((transaction, index) => (
           <div 
             key={transaction.id}
-            className="flex items-center justify-between p-3 rounded-xl bg-secondary/30 hover:bg-secondary/50 
+            className="flex items-center justify-between p-3 rounded-[24px] bg-secondary/30 hover:bg-secondary/50 
                        transition-all duration-200 animate-slide-in-right opacity-0"
             style={{ animationDelay: `${index * 0.05}s`, animationFillMode: 'forwards' }}
           >
             <div className="flex items-center gap-3">
-              <div className={`w-10 h-10 rounded-xl flex items-center justify-center text-lg
+              <div className={`w-10 h-10 rounded-[24px] flex items-center justify-center text-lg
                 ${categoryBgClasses[transaction.category]}`}>
                 {transaction.icon}
               </div>

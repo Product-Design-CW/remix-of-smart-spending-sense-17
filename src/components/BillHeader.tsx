@@ -32,7 +32,7 @@ const BillHeader = ({ summary }: BillHeaderProps) => {
         {/* Total amount */}
         <div className="mb-8">
           <p className="text-sm text-muted-foreground mb-1">Total Amount Due</p>
-          <h1 className="text-5xl md:text-6xl font-bold tracking-tight">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight">
             <span className="text-gradient">{formatCurrency(summary.totalAmount)}</span>
           </h1>
         </div>

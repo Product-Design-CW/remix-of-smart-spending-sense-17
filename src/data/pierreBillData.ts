@@ -2,26 +2,27 @@ import { PierreBill } from '@/types/pierre';
 
 export const pierreBill: PierreBill = {
   overview: {
-    totalAmount: 4247.82,
+    totalAmount: 4646.15,
     previousAmount: 3521.40,
-    changePercent: 20.6,
+    changePercent: 31.9,
     dueDate: '2025-01-15',
     insight: {
-      summary: "Esta fatura está mais alta principalmente por decisões de parcelamento — seus gastos do dia a dia estavam sob controle.",
+      summary: "Esta fatura está mais alta principalmente por decisões passadas e juros — seus gastos variáveis do mês representam cerca de metade do total.",
       tone: 'empowering',
     },
+    creditLimit: 10000.00,
   },
 
   breakdown: {
     pastDecisions: {
-      amount: 2380.00,
-      percentage: 56,
+      amount: 2018.30,
+      percentage: 43,
       installments: 1680.00,
-      recurring: 700.00,
+      recurring: 338.30,
     },
     thisMonthChoices: {
-      amount: 1650.32,
-      percentage: 39,
+      amount: 2410.35,
+      percentage: 52,
     },
     costOfCredit: {
       amount: 217.50,
@@ -29,19 +30,37 @@ export const pierreBill: PierreBill = {
       interest: 180.00,
       fees: 37.50,
     },
-    explanation: "Mais da metade desta fatura já estava decidida antes mesmo do mês começar.",
+    explanation: "Quase metade da sua fatura vem de compromissos assumidos anteriormente (parcelas e assinaturas).",
   },
 
   futureSimulation: {
-    minimumNextMonth: 2050.00,
-    lockedAmount: 2050.00,
+    minimumNextMonth: 2018.30,
+    lockedAmount: 2018.30,
     installmentMonths: 8,
-    insight: "Se você não fizesse nenhuma compra no próximo mês, sua fatura ainda seria de R$ 2.050.",
+    insight: "Se você não fizesse nenhuma compra no próximo mês, sua fatura ainda seria de R$ 2.018,30.",
   },
 
   categories: [
     {
       id: '1',
+      name: 'Compras',
+      amount: 2080.00,
+      previousAmount: 1850.00,
+      trend: 'up',
+      trendPercent: 12,
+      insight: "O valor alto se deve principalmente às parcelas de compras anteriores.",
+      icon: '🛍️',
+      transactions: [
+        { id: 't_inst1', name: 'Parc. Apple Store (4/12)', amount: 499.92, date: '2024-12-05' },
+        { id: 't_inst2', name: 'Parc. Loja de Depto (3/4)', amount: 560.08, date: '2024-12-05' },
+        { id: 't_inst3', name: 'Parc. Loja de Móveis (6/10)', amount: 320.00, date: '2024-12-05' },
+        { id: 't_inst4', name: 'Parc. Eletrônicos (2/6)', amount: 300.00, date: '2024-12-05' },
+        { id: 't6', name: 'Amazon.com.br', amount: 150.00, date: '2024-12-15' },
+        { id: 't8', name: 'Zara', amount: 250.00, date: '2024-12-22' },
+      ]
+    },
+    {
+      id: '2',
       name: 'Alimentação e Delivery',
       amount: 892.45,
       previousAmount: 697.23,
@@ -49,54 +68,100 @@ export const pierreBill: PierreBill = {
       trendPercent: 28,
       insight: "Picos de delivery nos fins de semana estão elevando essa categoria.",
       icon: '🍽️',
-    },
-    {
-      id: '2',
-      name: 'Compras',
-      amount: 1245.00,
-      previousAmount: 1208.74,
-      trend: 'stable',
-      trendPercent: 3,
-      insight: "Compras estão calmas, mas as parcelas mantêm o valor alto.",
-      icon: '🛍️',
+      transactions: [
+        { id: 't1', name: 'iFood - McDonald\'s', amount: 45.90, date: '2024-12-05' },
+        { id: 't2', name: 'Supermercado Extra', amount: 350.00, date: '2024-12-10' },
+        { id: 't3', name: 'iFood - Sushi House', amount: 120.50, date: '2024-12-15' },
+        { id: 't4', name: 'Restaurante Silva', amount: 89.00, date: '2024-12-20' },
+        { id: 't5', name: 'Carrefour', amount: 287.05, date: '2024-12-28' },
+      ]
     },
     {
       id: '3',
-      name: 'Transporte',
-      amount: 342.80,
-      previousAmount: 403.29,
-      trend: 'down',
-      trendPercent: 15,
-      insight: "Transporte está estável e previsível. Bom controle aqui.",
-      icon: '🚗',
+      name: 'Entretenimento',
+      amount: 581.70,
+      previousAmount: 410.00,
+      trend: 'up',
+      trendPercent: 41,
+      insight: "Show e barzinho somaram custos extras este mês, além das assinaturas.",
+      icon: '🎬',
+      transactions: [
+        { id: 't16', name: 'Eventim - Show', amount: 300.00, date: '2024-12-14' },
+        { id: 't17', name: 'Bar do Zé', amount: 111.00, date: '2024-12-21' },
+        { id: 'sub1', name: 'Netflix', amount: 55.90, date: '2024-12-01' },
+        { id: 't15', name: 'Cinemark', amount: 45.00, date: '2024-12-06' },
+        { id: 'sub2', name: 'Spotify Família', amount: 34.90, date: '2024-12-02' },
+        { id: 'sub5', name: 'HBO Max', amount: 34.90, date: '2024-12-03' },
+      ]
     },
     {
       id: '4',
-      name: 'Entretenimento',
-      amount: 456.00,
-      previousAmount: 314.48,
+      name: 'Transporte',
+      amount: 538.03,
+      previousAmount: 380.00,
       trend: 'up',
-      trendPercent: 45,
-      insight: "Ingressos de shows fizeram deste um mês atípico.",
-      icon: '🎬',
+      trendPercent: 41,
+      insight: "Multa de trânsito impactou significativamente esta categoria.",
+      icon: '🚗',
+      transactions: [
+        { id: 'fine1', name: 'DETRAN - Multa', amount: 195.23, date: '2024-12-10' },
+        { id: 't12', name: 'Posto Ipiranga', amount: 150.00, date: '2024-12-15' },
+        { id: 't14', name: '99 App', amount: 120.00, date: '2024-12-29' },
+        { id: 't11', name: 'Uber Trip', amount: 32.50, date: '2024-12-08' },
+        { id: 't10', name: 'Uber Trip', amount: 24.90, date: '2024-12-01' },
+        { id: 't13', name: 'Uber Trip', amount: 15.40, date: '2024-12-22' },
+      ]
     },
     {
       id: '5',
+      name: 'Serviços e Taxas',
+      amount: 334.97,
+      previousAmount: 100.00,
+      trend: 'up',
+      trendPercent: 235,
+      insight: "Juros e taxas do cartão aumentaram muito o custo de serviços.",
+      icon: '🏦',
+      transactions: [
+        { id: 'fee1', name: 'Juros de Financiamento', amount: 180.00, date: '2024-12-28' },
+        { id: 'fine2', name: 'Multa Administrativa', amount: 54.77, date: '2024-12-15' },
+        { id: 'fee2', name: 'IOF / Taxas', amount: 37.50, date: '2024-12-28' },
+        { id: 'sub6', name: 'Assinatura de Jornal', amount: 29.90, date: '2024-12-05' },
+        { id: 'sub7', name: 'Backup na Nuvem', amount: 19.90, date: '2024-12-05' },
+        { id: 'sub3', name: 'iCloud', amount: 12.90, date: '2024-12-05' },
+      ]
+    },
+    {
+      id: '6',
       name: 'Saúde',
-      amount: 189.00,
-      previousAmount: 189.00,
+      amount: 219.00,
+      previousAmount: 200.00,
       trend: 'stable',
-      trendPercent: 0,
-      insight: "Mensalidade da academia consistente. Nada inesperado.",
+      trendPercent: 9,
+      insight: "Gastos consistentes com academia e farmácia.",
       icon: '💪',
+      transactions: [
+        { id: 'sub4', name: 'Academia', amount: 149.90, date: '2024-12-10' },
+        { id: 't19', name: 'Droga Raia', amount: 69.10, date: '2024-12-20' },
+      ]
     },
   ],
 
   installments: {
     totalThisBill: 1680.00,
-    monthlyImpact: 1120.00,
-    remainingMonths: 8,
-    totalRemaining: 8960.00,
+    monthlyImpact: 1120.00, // Reduced next month? Need to check.
+    // Apple (499.92), Moveis (320), Eletronicos (300), Depto (560.08 ends Feb, so yes next month is same)
+    // Wait, Depto ends Feb 2025. Current Dec 2024. Jan 2025 is next. So it continues.
+    // Next month sum: 1680.00.
+    // Why was it 1120 in original data? Maybe one ended?
+    // Depto: 3/4. Next is 4/4.
+    // So next month impact is still 1680.00.
+    remainingMonths: 8, // Max months remaining (Apple ends Sep 2025)
+    totalRemaining: 8960.00, // This needs to be calculated or estimated.
+    // Apple: 8 left * 499.92 = ~4000
+    // Moveis: 4 left * 320 = 1280
+    // Eletronicos: 4 left * 300 = 1200
+    // Depto: 1 left * 560 = 560
+    // Total Remaining Principal: ~7040.
     debtFreeDate: '2025-09',
     items: [
       {
@@ -132,23 +197,23 @@ export const pierreBill: PierreBill = {
         endDate: '2025-02',
       },
     ],
-    insight: "Suas faturas futuras carregam R$ 1.120 por mês por causa de compras passadas.",
+    insight: "Seus parcelamentos comprometem R$ 1.680 da sua renda mensal até pelo menos fevereiro.",
   },
 
   subscriptions: {
-    monthlyTotal: 287.94,
-    annualTotal: 3455.28,
+    monthlyTotal: 338.30,
+    annualTotal: 4059.60,
     count: 7,
     items: [
+      { name: 'Academia', amount: 149.90, frequency: 'monthly', category: 'Saúde' },
       { name: 'Netflix', amount: 55.90, frequency: 'monthly', category: 'Entretenimento' },
       { name: 'Spotify Família', amount: 34.90, frequency: 'monthly', category: 'Entretenimento' },
-      { name: 'iCloud', amount: 12.90, frequency: 'monthly', category: 'Tecnologia' },
-      { name: 'Academia', amount: 149.90, frequency: 'monthly', category: 'Saúde' },
       { name: 'HBO Max', amount: 34.90, frequency: 'monthly', category: 'Entretenimento' },
       { name: 'Assinatura de Jornal', amount: 29.90, frequency: 'monthly', category: 'Informação' },
       { name: 'Backup na Nuvem', amount: 19.90, frequency: 'monthly', category: 'Tecnologia' },
+      { name: 'iCloud', amount: 12.90, frequency: 'monthly', category: 'Tecnologia' },
     ],
-    insight: "Essas assinaturas custam R$ 3.455 por ano. Duas delas não são usadas há mais de 30 dias.",
+    insight: "Essas assinaturas custam mais de R$ 4.000 por ano. Duas delas não são usadas há mais de 30 dias.",
   },
 
   wastedMoney: {
@@ -158,23 +223,23 @@ export const pierreBill: PierreBill = {
     lateFees: 0,
     trafficFines: 195.23,
     otherFines: 54.77,
-    insight: "Este é um dinheiro que você pagou sem receber nada em troca. Multas e taxas podem ser evitadas com mais atenção.",
+    insight: "Este é um dinheiro que saiu do seu bolso sem trazer benefício algum. Quase 500 reais em juros e multas.",
   },
 
   reflections: [
     {
       id: '1',
-      text: "Seus gastos não estão fora de controle — seus compromissos estão.",
+      text: "Seus gastos variáveis estão altos, mas o maior peso vem dos compromissos fixos (parcelas e assinaturas).",
       type: 'observation',
     },
     {
       id: '2',
-      text: "Reduzir novos parcelamentos diminuiria rapidamente as faturas futuras.",
+      text: "Evitar novas parcelas agora é crucial para reduzir o valor das próximas faturas.",
       type: 'suggestion',
     },
     {
       id: '3',
-      text: "Assinaturas são pequenas individualmente, mas pesadas juntas.",
+      text: "Quase R$ 500 foram gastos com juros e multas. Automatizar pagamentos pode evitar isso.",
       type: 'observation',
     },
   ],
@@ -182,24 +247,24 @@ export const pierreBill: PierreBill = {
   suggestedActions: [
     {
       id: '0',
-      title: 'Centralize suas contas no Pierre',
-      description: 'Conecte outros cartões e contas bancárias para ter uma visão completa dos seus gastos',
-      impact: 'Visão 360° das suas finanças',
-      type: 'connect',
+      title: 'Pagar fatura total',
+      description: 'Evite os R$ 180 de juros no próximo mês pagando o valor total.',
+      impact: 'Economia imediata de juros',
+      type: 'limit', // using existing type
     },
     {
       id: '1',
-      title: 'Definir um limite para delivery',
-      description: 'Limitar gastos com delivery nos fins de semana a R$ 150',
-      impact: 'Pode economizar R$ 200/mês',
-      type: 'limit',
+      title: 'Cancelar assinaturas não usadas',
+      description: 'HBO Max e Backup na Nuvem mostram baixo uso.',
+      impact: 'Economia de R$ 55/mês',
+      type: 'review',
     },
     {
       id: '2',
-      title: 'Revisar assinaturas não usadas',
-      description: 'HBO Max e Backup na Nuvem mostram baixo uso',
-      impact: 'R$ 55/mês, R$ 660/ano',
-      type: 'review',
+      title: 'Centralizar gastos de transporte',
+      description: 'Defina um limite mensal para Uber e Combustível.',
+      impact: 'Controle melhor os R$ 538 gastos',
+      type: 'limit',
     },
   ],
 };

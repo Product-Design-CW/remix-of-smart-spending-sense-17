@@ -9,6 +9,7 @@ export interface BillOverview {
   changePercent: number;
   dueDate: string;
   insight: BillInsight;
+  creditLimit?: number;
 }
 
 export interface BillBreakdown {
@@ -38,6 +39,13 @@ export interface FutureSimulation {
   insight: string;
 }
 
+export interface CategoryTransaction {
+  id: string;
+  name: string;
+  amount: number;
+  date: string;
+}
+
 export interface CategorySpending {
   id: string;
   name: string;
@@ -47,6 +55,7 @@ export interface CategorySpending {
   trendPercent: number;
   insight: string;
   icon: string;
+  transactions?: CategoryTransaction[];
 }
 
 export interface InstallmentSummary {
@@ -91,6 +100,7 @@ export interface WastedMoney {
   trafficFines: number;
   otherFines: number;
   insight: string;
+  icon?: string;
 }
 
 export interface SmartReflection {

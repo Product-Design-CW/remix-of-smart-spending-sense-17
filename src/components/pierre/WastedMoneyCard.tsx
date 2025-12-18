@@ -17,18 +17,15 @@ const WastedMoneyCard = ({ wastedMoney }: WastedMoneyCardProps) => {
 
   return (
     <section className="opacity-0 animate-fade-up delay-6">
-      <div className="bg-card rounded-2xl p-6 md:p-8 border border-border/50">
-        <div className="flex items-start gap-3 mb-6">
-          <div className="p-2 rounded-xl bg-insight-negative/10">
-            <Flame className="w-5 h-5 text-insight-negative" />
-          </div>
+      <div className="bg-transparent rounded-[24px]">
+        <div className="flex items-center justify-start gap-3 mb-6">
           <div>
             <h2 className="font-serif text-xl">Dinheiro que não melhorou sua vida</h2>
           </div>
         </div>
 
         <div className="mb-6">
-          <p className="font-serif text-3xl font-medium text-insight-negative">
+          <p className="font-serif text-2xl sm:text-3xl font-medium text-status-destructive">
             {formatCurrency(wastedMoney.total)}
           </p>
         </div>

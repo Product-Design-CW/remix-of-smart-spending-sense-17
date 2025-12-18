@@ -6,13 +6,13 @@ interface SpendingChartProps {
 }
 
 const categoryColors: Record<CategoryType, string> = {
-  food: 'hsl(142 71% 45%)',
-  transport: 'hsl(217 91% 60%)',
-  shopping: 'hsl(280 87% 65%)',
-  entertainment: 'hsl(340 82% 52%)',
-  utilities: 'hsl(45 93% 47%)',
-  health: 'hsl(173 80% 40%)',
-  other: 'hsl(228 15% 50%)',
+  food: 'hsl(var(--cat-food))',
+  transport: 'hsl(var(--cat-transport))',
+  shopping: 'hsl(var(--cat-shopping))',
+  entertainment: 'hsl(var(--cat-leisure))',
+  utilities: 'hsl(var(--cat-housing))',
+  health: 'hsl(var(--cat-health))',
+  other: 'hsl(var(--cat-other))',
 };
 
 const SpendingChart = ({ categories }: SpendingChartProps) => {
@@ -36,7 +36,7 @@ const SpendingChart = ({ categories }: SpendingChartProps) => {
     new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' }).format(amount);
 
   return (
-    <div className="rounded-2xl gradient-card shadow-card p-6 animate-fade-in stagger-1">
+    <div className="rounded-[24px] gradient-card shadow-card p-6 animate-fade-in stagger-1">
       <h2 className="text-lg font-semibold mb-6">Spending Breakdown</h2>
       
       <div className="flex flex-col md:flex-row items-center gap-8">
@@ -89,7 +89,7 @@ const SpendingChart = ({ categories }: SpendingChartProps) => {
           {categories.map((cat, index) => (
             <div 
               key={cat.category}
-              className={`flex items-center justify-between p-3 rounded-xl transition-all duration-200 cursor-pointer
+              className={`flex items-center justify-between p-3 rounded-[24px] transition-all duration-200 cursor-pointer
                 ${hoveredCategory === cat.category ? 'bg-secondary' : 'hover:bg-secondary/50'}`}
               onMouseEnter={() => setHoveredCategory(cat.category)}
               onMouseLeave={() => setHoveredCategory(null)}

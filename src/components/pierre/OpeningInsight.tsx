@@ -13,19 +13,19 @@ const OpeningInsight = ({ overview }: OpeningInsightProps) => {
   return (
     <section className="opacity-0 animate-fade-up">
       {/* Main insight */}
-      <p className="font-serif text-2xl md:text-3xl leading-relaxed text-foreground/90 mb-10">
+      <p className="text-h1 sm:text-[30px] text-2xl mb-8 sm:mb-10 text-foreground/90">
         {overview.insight.summary}
       </p>
 
       {/* Bill amount */}
       <div className="space-y-4">
-        <div className="flex items-end gap-4 flex-wrap">
-          <span className="font-serif text-5xl md:text-6xl font-medium tracking-tight">
+        <div className="flex items-end gap-3 sm:gap-4 flex-wrap">
+          <span className="font-serif text-4xl sm:text-5xl md:text-6xl font-medium tracking-tight">
             {formatCurrency(overview.totalAmount)}
           </span>
           
           <div className={`flex items-center gap-1.5 px-3 py-1.5 rounded-full text-sm font-medium
-            ${isIncrease ? 'surface-concern text-negative' : 'surface-highlight text-positive'}`}>
+            ${isIncrease ? 'bg-status-destructive/10 text-status-destructive' : 'bg-status-success/10 text-status-success'}`}>
             {isIncrease ? (
               <ArrowUp className="w-4 h-4" />
             ) : (

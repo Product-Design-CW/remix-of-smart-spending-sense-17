@@ -10,12 +10,9 @@ const SubscriptionsCard = ({
   subscriptions
 }: SubscriptionsCardProps) => {
   const [isOpen, setIsOpen] = useState(false);
-  return <section className="opacity-0 animate-fade-up delay-5">
-      <div className="bg-card rounded-2xl p-6 md:p-8 shadow-soft">
+  return     <section className="opacity-0 animate-fade-up delay-5">
+      <div className="bg-transparent rounded-[24px]">
         <div className="flex items-start gap-3 mb-6">
-          <div className="p-2 rounded-xl bg-primary/10">
-            <Repeat className="w-5 h-5 text-primary" />
-          </div>
           <div>
             <h2 className="font-serif text-xl">Assinaturas que você não pensa</h2>
             <p className="text-sm text-muted-foreground mt-1">{subscriptions.count} cobranças recorrentes</p>
@@ -23,13 +20,13 @@ const SubscriptionsCard = ({
         </div>
 
         {/* Annual impact highlight */}
-        <div className="rounded-xl p-5 mb-6 bg-border-muted border-border border">
-          <div className="flex items-end justify-between">
+        <div className="rounded-[24px] p-5 mb-6 bg-surface/50 border-0">
+          <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 sm:gap-0">
             <div>
               <p className="text-xs text-muted-foreground mb-1">Mensal</p>
               <p className="font-serif text-xl font-medium">{formatCurrency(subscriptions.monthlyTotal)}</p>
             </div>
-            <div className="text-right">
+            <div className="text-left sm:text-right">
               <p className="text-xs text-muted-foreground mb-1">Por ano</p>
               <p className="font-serif text-2xl font-medium text-foreground">{formatCurrency(subscriptions.annualTotal)}</p>
             </div>
@@ -49,13 +46,15 @@ const SubscriptionsCard = ({
 
           <CollapsibleContent>
             <div className="mt-4 pt-4 border-t border-border/50 space-y-3">
-              {subscriptions.items.map((item, i) => <div key={i} className="flex items-center justify-between py-2">
+              {subscriptions.items.map((item, i) => (
+                <div key={i} className="flex items-center justify-between py-2">
                   <div>
                     <p className="text-sm font-medium">{item.name}</p>
                     <p className="text-xs text-muted-foreground">{item.category}</p>
                   </div>
                   <p className="font-medium text-sm">{formatCurrency(item.amount)}/mês</p>
-                </div>)}
+                </div>
+              ))}
             </div>
           </CollapsibleContent>
         </Collapsible>

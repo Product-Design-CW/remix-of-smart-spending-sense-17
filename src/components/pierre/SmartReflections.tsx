@@ -8,8 +8,7 @@ interface SmartReflectionsProps {
 const SmartReflections = ({ reflections }: SmartReflectionsProps) => {
   return (
     <section className="opacity-0 animate-fade-up delay-6">
-      <div className="flex items-center gap-2 mb-6">
-        <Sparkles className="w-5 h-5 text-primary" />
+      <div className="flex items-center gap-3 mb-6">
         <h2 className="font-serif text-xl">O que o Pierre notou</h2>
       </div>
 
@@ -17,7 +16,7 @@ const SmartReflections = ({ reflections }: SmartReflectionsProps) => {
         {reflections.map((reflection, i) => (
           <div
             key={reflection.id}
-            className="bg-card rounded-xl p-5 shadow-soft border-l-2 border-primary/40"
+            className="rounded-[24px] p-5 border"
           >
             <p className="text-foreground/90 leading-relaxed font-medium">
               "{reflection.text}"

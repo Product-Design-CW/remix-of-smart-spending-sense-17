@@ -27,16 +27,16 @@ const SuggestedActions = ({ actions }: SuggestedActionsProps) => {
           return (
             <button
               key={action.id}
-              className="w-full text-left bg-card hover:bg-muted/50 rounded-2xl p-5 shadow-soft 
-                         transition-all duration-200 hover:shadow-lifted group"
+              className="w-full text-left bg-card hover:bg-surface/50 rounded-[24px] p-5 
+                         transition-all duration-200 group"
             >
               <div className="flex items-start gap-4">
-                <div className="p-2.5 rounded-xl surface-highlight">
-                  <Icon className="w-5 h-5 text-primary" />
+                <div className="p-3 rounded-[24px] bg-surface-hover">
+                  <Icon className="w-6 h-6 text-primary" />
                 </div>
                 <div className="flex-1">
                   <div className="flex items-center justify-between">
-                    <h3 className="font-medium mb-1">{action.title}</h3>
+                    <h3 className="font-medium mb-1 text-foreground">{action.title}</h3>
                     <ArrowRight className="w-4 h-4 text-muted-foreground group-hover:text-primary 
                                            group-hover:translate-x-1 transition-all" />
                   </div>

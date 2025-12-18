@@ -13,19 +13,19 @@ const Index = () => {
     <div className="min-h-screen bg-background">
       {/* Header */}
       <header className="border-b border-border/50 sticky top-0 z-50 bg-background/80 backdrop-blur-sm">
-        <div className="container max-w-2xl mx-auto px-6 py-4">
+        <div className="container max-w-2xl mx-auto px-4 sm:px-6 py-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-2">
-              <span className="font-serif text-xl font-medium">Pierre</span>
+              <span className="text-h3-medium">Pierre</span>
             </div>
-            <span className="text-sm text-muted-foreground">Dezembro 2024</span>
+            <span className="text-body-sm text-muted-foreground">Dezembro 2024</span>
           </div>
         </div>
       </header>
 
       {/* Main content */}
-      <main className="container max-w-2xl mx-auto px-6 py-10">
-        <div className="space-y-12">
+      <main className="container max-w-2xl mx-auto px-4 sm:px-6 py-6 sm:py-10">
+        <div className="space-y-8 sm:space-y-12">
           {/* 1. Opening Insight */}
           <OpeningInsight overview={pierreBill.overview} />
 
@@ -35,20 +35,31 @@ const Index = () => {
           {/* 2. Bill Breakdown */}
           <BillBreakdownCard breakdown={pierreBill.breakdown} />
 
+          <div className="h-px bg-border/50" />
+
           {/* 3. Future Simulation + Installments */}
           <FutureSimulationCard 
             simulation={pierreBill.futureSimulation} 
-            installments={pierreBill.installments} 
+            installments={pierreBill.installments}
+            creditLimit={pierreBill.overview.creditLimit}
           />
+
+          <div className="h-px bg-border/50" />
 
           {/* 4. Category Insights */}
           <CategoryInsights categories={pierreBill.categories} />
 
+          <div className="h-px bg-border/50" />
+
           {/* 5. Subscriptions */}
           <SubscriptionsCard subscriptions={pierreBill.subscriptions} />
 
+          <div className="h-px bg-border/50" />
+
           {/* 6. Wasted Money */}
           <WastedMoneyCard wastedMoney={pierreBill.wastedMoney} />
+
+          <div className="h-px bg-border/50" />
 
           {/* 7. Smart Reflections */}
           <SmartReflections reflections={pierreBill.reflections} />
