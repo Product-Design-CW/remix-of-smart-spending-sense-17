@@ -10,7 +10,7 @@ const SubscriptionsCard = ({
   subscriptions
 }: SubscriptionsCardProps) => {
   const [isOpen, setIsOpen] = useState(false);
-  return     <section className="opacity-0 animate-fade-up delay-5">
+  return     <section className="">
       <div className="bg-transparent rounded-[24px]">
         <div className="flex items-start gap-3 mb-6">
           <div>

@@ -11,7 +11,7 @@ const OpeningInsight = ({ overview }: OpeningInsightProps) => {
   const changeAbs = Math.abs(overview.changePercent);
 
   return (
-    <section className="opacity-0 animate-fade-up">
+    <section className="">
       {/* Main insight */}
       <p className="text-h1 sm:text-[30px] text-2xl mb-8 sm:mb-10 text-foreground/90">
         {overview.insight.summary}

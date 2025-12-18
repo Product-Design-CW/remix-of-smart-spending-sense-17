@@ -63,7 +63,7 @@ const CategoryInsights = ({ categories }: CategoryInsightsProps) => {
   };
 
   return (
-    <section className="opacity-0 animate-fade-up delay-3">
+    <section className="">
       {/* Header & Chart */}
       <div className="mb-8">
         <p className="font-medium text-muted-foreground text-sm sm:text-base mb-1">Gastos por categoria</p>

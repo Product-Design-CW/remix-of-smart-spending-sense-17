@@ -7,7 +7,7 @@ interface SmartReflectionsProps {
 
 const SmartReflections = ({ reflections }: SmartReflectionsProps) => {
   return (
-    <section className="opacity-0 animate-fade-up delay-6">
+    <section className="">
       <div className="flex items-center gap-3 mb-6">
         <h2 className="font-serif text-xl">O que o Pierre notou</h2>
       </div>

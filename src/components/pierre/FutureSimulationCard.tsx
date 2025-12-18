@@ -10,7 +10,7 @@ interface FutureSimulationCardProps {
 const FutureSimulationCard = ({ simulation, installments, creditLimit = 0 }: FutureSimulationCardProps) => {
 
   return (
-    <section className="opacity-0 animate-fade-up delay-2">
+    <section className="">
       <div className="bg-transparent rounded-[24px]">
         <div className="flex flex-col gap-2 mb-6">
           <div className="bg-surface/50 rounded-[24px] p-4 w-full">

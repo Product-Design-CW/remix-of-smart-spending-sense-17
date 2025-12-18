@@ -16,7 +16,7 @@ const WastedMoneyCard = ({ wastedMoney }: WastedMoneyCardProps) => {
   ].filter(item => item.amount > 0);
 
   return (
-    <section className="opacity-0 animate-fade-up delay-6">
+    <section className="">
       <div className="bg-transparent rounded-[24px]">
         <div className="flex items-center justify-start gap-3 mb-6">
           <div>

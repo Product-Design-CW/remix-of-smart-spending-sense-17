@@ -40,7 +40,7 @@ const BillBreakdownCard = ({ breakdown }: BillBreakdownCardProps) => {
   ];
 
   return (
-    <section className="opacity-0 animate-fade-up delay-1">
+    <section className="">
       <div className="bg-transparent rounded-[24px]">
         <h2 className="font-medium text-lg leading-6 mb-6 text-foreground">
           {breakdown.explanation}

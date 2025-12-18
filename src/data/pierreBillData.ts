@@ -5,7 +5,7 @@ export const pierreBill: PierreBill = {
     totalAmount: 4646.15,
     previousAmount: 3521.40,
     changePercent: 31.9,
-    dueDate: '2025-01-15',
+    dueDate: '2025-12-15',
     insight: {
       summary: "Esta fatura está mais alta principalmente por decisões passadas e juros — seus gastos variáveis do mês representam cerca de metade do total.",
       tone: 'empowering',
@@ -51,12 +51,12 @@ export const pierreBill: PierreBill = {
       insight: "O valor alto se deve principalmente às parcelas de compras anteriores.",
       icon: '🛍️',
       transactions: [
-        { id: 't_inst1', name: 'Parc. Apple Store (4/12)', amount: 499.92, date: '2024-12-05' },
-        { id: 't_inst2', name: 'Parc. Loja de Depto (3/4)', amount: 560.08, date: '2024-12-05' },
-        { id: 't_inst3', name: 'Parc. Loja de Móveis (6/10)', amount: 320.00, date: '2024-12-05' },
-        { id: 't_inst4', name: 'Parc. Eletrônicos (2/6)', amount: 300.00, date: '2024-12-05' },
-        { id: 't6', name: 'Amazon.com.br', amount: 150.00, date: '2024-12-15' },
-        { id: 't8', name: 'Zara', amount: 250.00, date: '2024-12-22' },
+        { id: 't_inst1', name: 'Parc. Apple Store (4/12)', amount: 499.92, date: '2025-11-05' },
+        { id: 't_inst2', name: 'Parc. Loja de Depto (3/4)', amount: 560.08, date: '2025-11-05' },
+        { id: 't_inst3', name: 'Parc. Loja de Móveis (6/10)', amount: 320.00, date: '2025-11-05' },
+        { id: 't_inst4', name: 'Parc. Eletrônicos (2/6)', amount: 300.00, date: '2025-11-05' },
+        { id: 't6', name: 'Amazon.com.br', amount: 150.00, date: '2025-11-15' },
+        { id: 't8', name: 'Zara', amount: 250.00, date: '2025-11-22' },
       ]
     },
     {
@@ -69,11 +69,11 @@ export const pierreBill: PierreBill = {
       insight: "Picos de delivery nos fins de semana estão elevando essa categoria.",
       icon: '🍽️',
       transactions: [
-        { id: 't1', name: 'iFood - McDonald\'s', amount: 45.90, date: '2024-12-05' },
-        { id: 't2', name: 'Supermercado Extra', amount: 350.00, date: '2024-12-10' },
-        { id: 't3', name: 'iFood - Sushi House', amount: 120.50, date: '2024-12-15' },
-        { id: 't4', name: 'Restaurante Silva', amount: 89.00, date: '2024-12-20' },
-        { id: 't5', name: 'Carrefour', amount: 287.05, date: '2024-12-28' },
+        { id: 't1', name: 'iFood - McDonald\'s', amount: 45.90, date: '2025-11-05' },
+        { id: 't2', name: 'Supermercado Extra', amount: 350.00, date: '2025-11-10' },
+        { id: 't3', name: 'iFood - Sushi House', amount: 120.50, date: '2025-11-15' },
+        { id: 't4', name: 'Restaurante Silva', amount: 89.00, date: '2025-11-20' },
+        { id: 't5', name: 'Carrefour', amount: 287.05, date: '2025-11-28' },
       ]
     },
     {
@@ -86,12 +86,12 @@ export const pierreBill: PierreBill = {
       insight: "Show e barzinho somaram custos extras este mês, além das assinaturas.",
       icon: '🎬',
       transactions: [
-        { id: 't16', name: 'Eventim - Show', amount: 300.00, date: '2024-12-14' },
-        { id: 't17', name: 'Bar do Zé', amount: 111.00, date: '2024-12-21' },
-        { id: 'sub1', name: 'Netflix', amount: 55.90, date: '2024-12-01' },
-        { id: 't15', name: 'Cinemark', amount: 45.00, date: '2024-12-06' },
-        { id: 'sub2', name: 'Spotify Família', amount: 34.90, date: '2024-12-02' },
-        { id: 'sub5', name: 'HBO Max', amount: 34.90, date: '2024-12-03' },
+        { id: 't16', name: 'Eventim - Show', amount: 300.00, date: '2025-11-14' },
+        { id: 't17', name: 'Bar do Zé', amount: 111.00, date: '2025-11-21' },
+        { id: 'sub1', name: 'Netflix', amount: 55.90, date: '2025-11-01' },
+        { id: 't15', name: 'Cinemark', amount: 45.00, date: '2025-11-06' },
+        { id: 'sub2', name: 'Spotify Família', amount: 34.90, date: '2025-11-02' },
+        { id: 'sub5', name: 'HBO Max', amount: 34.90, date: '2025-11-03' },
       ]
     },
     {
@@ -104,12 +104,12 @@ export const pierreBill: PierreBill = {
       insight: "Multa de trânsito impactou significativamente esta categoria.",
       icon: '🚗',
       transactions: [
-        { id: 'fine1', name: 'DETRAN - Multa', amount: 195.23, date: '2024-12-10' },
-        { id: 't12', name: 'Posto Ipiranga', amount: 150.00, date: '2024-12-15' },
-        { id: 't14', name: '99 App', amount: 120.00, date: '2024-12-29' },
-        { id: 't11', name: 'Uber Trip', amount: 32.50, date: '2024-12-08' },
-        { id: 't10', name: 'Uber Trip', amount: 24.90, date: '2024-12-01' },
-        { id: 't13', name: 'Uber Trip', amount: 15.40, date: '2024-12-22' },
+        { id: 'fine1', name: 'DETRAN - Multa', amount: 195.23, date: '2025-11-10' },
+        { id: 't12', name: 'Posto Ipiranga', amount: 150.00, date: '2025-11-15' },
+        { id: 't14', name: '99 App', amount: 120.00, date: '2025-11-29' },
+        { id: 't11', name: 'Uber Trip', amount: 32.50, date: '2025-11-08' },
+        { id: 't10', name: 'Uber Trip', amount: 24.90, date: '2025-11-01' },
+        { id: 't13', name: 'Uber Trip', amount: 15.40, date: '2025-11-22' },
       ]
     },
     {
@@ -122,12 +122,12 @@ export const pierreBill: PierreBill = {
       insight: "Juros e taxas do cartão aumentaram muito o custo de serviços.",
       icon: '🏦',
       transactions: [
-        { id: 'fee1', name: 'Juros de Financiamento', amount: 180.00, date: '2024-12-28' },
-        { id: 'fine2', name: 'Multa Administrativa', amount: 54.77, date: '2024-12-15' },
-        { id: 'fee2', name: 'IOF / Taxas', amount: 37.50, date: '2024-12-28' },
-        { id: 'sub6', name: 'Assinatura de Jornal', amount: 29.90, date: '2024-12-05' },
-        { id: 'sub7', name: 'Backup na Nuvem', amount: 19.90, date: '2024-12-05' },
-        { id: 'sub3', name: 'iCloud', amount: 12.90, date: '2024-12-05' },
+        { id: 'fee1', name: 'Juros de Financiamento', amount: 180.00, date: '2025-11-28' },
+        { id: 'fine2', name: 'Multa Administrativa', amount: 54.77, date: '2025-11-15' },
+        { id: 'fee2', name: 'IOF / Taxas', amount: 37.50, date: '2025-11-28' },
+        { id: 'sub6', name: 'Assinatura de Jornal', amount: 29.90, date: '2025-11-05' },
+        { id: 'sub7', name: 'Backup na Nuvem', amount: 19.90, date: '2025-11-05' },
+        { id: 'sub3', name: 'iCloud', amount: 12.90, date: '2025-11-05' },
       ]
     },
     {
@@ -140,29 +140,18 @@ export const pierreBill: PierreBill = {
       insight: "Gastos consistentes com academia e farmácia.",
       icon: '💪',
       transactions: [
-        { id: 'sub4', name: 'Academia', amount: 149.90, date: '2024-12-10' },
-        { id: 't19', name: 'Droga Raia', amount: 69.10, date: '2024-12-20' },
+        { id: 'sub4', name: 'Academia', amount: 149.90, date: '2025-11-10' },
+        { id: 't19', name: 'Droga Raia', amount: 69.10, date: '2025-11-20' },
       ]
     },
   ],
 
   installments: {
     totalThisBill: 1680.00,
-    monthlyImpact: 1120.00, // Reduced next month? Need to check.
-    // Apple (499.92), Moveis (320), Eletronicos (300), Depto (560.08 ends Feb, so yes next month is same)
-    // Wait, Depto ends Feb 2025. Current Dec 2024. Jan 2025 is next. So it continues.
-    // Next month sum: 1680.00.
-    // Why was it 1120 in original data? Maybe one ended?
-    // Depto: 3/4. Next is 4/4.
-    // So next month impact is still 1680.00.
-    remainingMonths: 8, // Max months remaining (Apple ends Sep 2025)
-    totalRemaining: 8960.00, // This needs to be calculated or estimated.
-    // Apple: 8 left * 499.92 = ~4000
-    // Moveis: 4 left * 320 = 1280
-    // Eletronicos: 4 left * 300 = 1200
-    // Depto: 1 left * 560 = 560
-    // Total Remaining Principal: ~7040.
-    debtFreeDate: '2025-09',
+    monthlyImpact: 1120.00,
+    remainingMonths: 8,
+    totalRemaining: 8960.00,
+    debtFreeDate: '2026-08',
     items: [
       {
         merchant: 'Apple Store',
@@ -170,7 +159,7 @@ export const pierreBill: PierreBill = {
         monthlyAmount: 499.92,
         currentInstallment: 4,
         totalInstallments: 12,
-        endDate: '2025-09',
+        endDate: '2026-08',
       },
       {
         merchant: 'Loja de Móveis',
@@ -178,7 +167,7 @@ export const pierreBill: PierreBill = {
         monthlyAmount: 320.00,
         currentInstallment: 6,
         totalInstallments: 10,
-        endDate: '2025-05',
+        endDate: '2026-04',
       },
       {
         merchant: 'Eletrônicos',
@@ -186,7 +175,7 @@ export const pierreBill: PierreBill = {
         monthlyAmount: 300.00,
         currentInstallment: 2,
         totalInstallments: 6,
-        endDate: '2025-05',
+        endDate: '2026-04',
       },
       {
         merchant: 'Loja de Departamento',
@@ -194,7 +183,7 @@ export const pierreBill: PierreBill = {
         monthlyAmount: 560.08,
         currentInstallment: 3,
         totalInstallments: 4,
-        endDate: '2025-02',
+        endDate: '2026-01',
       },
     ],
     insight: "Seus parcelamentos comprometem R$ 1.680 da sua renda mensal até pelo menos fevereiro.",
